@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="_assets/styles/main.css">
+	<link type="text/css" rel="stylesheet" href="_assets/libraries/clever-contact/styles/form.css">
+	<title>Clever Contact</title>
+</head>
+<body>
+	<header>
+		<h1>Clever Contact</h1>
+		<h2>The Humble Contact Form, Reconsidered</h2>
+	</header>
+	<main>
+		<h3>Say Hello!</h3>
+		<section class="instructions">
+			<p>You can adapt this whole page for your own needs or incorporate just the form into your own designs as you like. Clever Contact is a single-page application (SPA)&mdash;submitting the form does not unload the page, so you can even layer the form with other content.</p>
+		</section>
+		<form>
+			<fieldset>
+				<legend>Sender</legend>
+				<div>
+					<label for="sender-name">Name</label>
+					<input type="text" placeholder="First Last" name="sender-name" id="sender-name" required>
+				</div>
+				<div>
+					<label for="sender-e-mail-address">E-Mail Address</label>
+					<input type="email" placeholder="user@example.com" name="sender-e-mail-address" id="sender-e-mail-address" required>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Message</legend>
+				<div>
+					<label for="subject">Subject</label>
+					<input type="text" name="subject" id="subject" required>
+				</div>
+				<div>
+					<label for="body">Body</label>
+					<textarea name="body" id="body" required></textarea>
+				</div>
+			</fieldset>
+			<footer><input type="submit" value="Send"></footer>
+		</form>
+		<section class="info">
+			<p>Clever Contact uses HTML5, CSS 3, XMLHttpRequest level 2, and FormData. Modern, evergreen browsers are the way to go.</p>
+			<p>This page and this form are responsive, so go ahead and resize and rotate your viewport as you please.</p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2015 by <a href="http://carroket.com/">Carroket, Inc.</a> &bull; <a href="../../LICENSE.txt">MIT License</a></p>
+		<p>Made in California by <a href="http://briansexton.com/">Brian Sexton</a></p>
+		<p><a href="http://appdrive.software/">AppDrive</a> &bull; <a href="http://components.software/">components.software</a></p>
+	</footer>
+</body>
+</html>

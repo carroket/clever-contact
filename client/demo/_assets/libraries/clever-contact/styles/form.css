@@ -1,0 +1,205 @@
+/*============================================================================*\
+	   ________                       ______            __             __
+	  / ____/ /__ _   _____  _____   / ____/___  ____  / /_____ ______/ /_
+	 / /   / / _ \ | / / _ \/ ___/  / /   / __ \/ __ \/ __/ __ `/ ___/ __/
+	/ /___/ /  __/ |/ /  __/ /     / /___/ /_/ / / / / /_/ /_/ / /__/ /_
+	\____/_/\___/|___/\___/_/      \____/\____/_/ /_/\__/\__,_/\___/\__/
+
+	CSS for Clever Contact
+	-----------------------------------------------------------------------
+	© 2015 by Carroket, Inc.
+	http://www.carroket.com/
+	-----------------------------------------------------------------------
+	Made by Brian Sexton.
+	http://www.briansexton.com/
+	-----------------------------------------------------------------------
+	MIT License
+
+\*============================================================================*/
+
+form
+{
+	border-radius: 0.5em;
+
+	padding: 1em;
+
+	background-color: #dfdfdf;
+	color: #000;
+}
+
+form > fieldset
+{
+	border: none;
+	border-top: 1px solid #ddd;
+
+	padding: 0;
+
+	margin: 0;
+}
+
+form > fieldset + fieldset
+{
+	margin-top: 1em;
+}
+
+form > fieldset > legend
+{
+	display: block;
+
+	box-sizing: border-box;
+
+	border-radius: 0.25em;
+
+	padding: 0.5em 0.75em;
+
+	width: 100%;
+
+	background-color: rgba(0, 0, 0, 0.05);
+
+	font-style: italic;
+}
+
+form div
+{
+	border: 1px solid #ccc;
+
+	border-radius: 0.25em;
+
+	background: transparent linear-gradient(to bottom, rgba(238, 238, 238, 0.5) 0%, rgba(221, 221, 221, 0.5) 100%);
+
+	margin: 1em 0 0 2em;
+}
+
+form label
+{
+	display: block;
+
+	padding: 0.5em 0.75em;
+
+	margin: 0;
+
+	cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea
+{
+	display: block;
+
+	box-sizing: border-box;
+
+	border: none;
+	border-left: 1px solid #ccc;
+
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;
+
+	padding: 0.5em;
+
+	/* font-family is necessary for Firefox to use the correct font and em-unit
+		width for the textarea. Last Verified: Firefox 35.0.1 */
+	font-family: inherit;
+
+	font-size: 1em;
+
+	width: 100%;
+
+	box-shadow: inset 1px 1px 6px 0 rgba(0, 0, 0, 0.25);
+
+	margin: 0;
+}
+
+form textarea
+{
+	height: 5em;
+}
+
+form input[type="text"]:disabled,
+form input[type="email"]:disabled,
+form textarea:disabled
+{
+	background-color: #eee;
+	color: #888;
+}
+
+@media (min-width: 768px)
+{
+	form div
+	{
+		display: flex;
+	}
+
+	form label
+	{
+		box-sizing: border-box;
+
+		width: 9.5em;
+	}
+
+	form input[type="text"],
+	form input[type="email"],
+	form textarea
+	{
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 0.25em;
+	}
+}
+
+form footer
+{
+	border-radius: 0.25em;
+
+	padding: 0.5em;
+
+	background-color: rgba(0, 0, 0, 0.05);
+
+	overflow: auto;
+
+	margin-top: 1em;
+
+	position: relative;
+}
+
+form footer input[type="submit"]
+{
+	display: block;
+
+	border: 1px solid #ccc;
+	border-radius: 0.35em;
+
+	padding: 0.75em 1em;
+
+	background-color: #2e6da4; /* This is a well-known blue. */
+	color: #fff;
+
+	font-size: 1em;
+
+	text-shadow: 1px 1px 2px #000;
+
+	float: right;
+
+	cursor: pointer;
+}
+
+form footer input[type="submit"]:hover
+{
+	background-color: #437cad;
+}
+
+form footer input[type="submit"]:active
+{
+	background-color: #296294;
+
+	text-shadow: none;
+}
+
+form footer input[type="submit"]:disabled
+{
+	background-color: #eee;
+	color: #bbb;
+
+	text-shadow: none;
+
+	cursor: not-allowed;
+}
