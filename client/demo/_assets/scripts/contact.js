@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
 
 		console.info("Failure! %o", event);
 
-		window.alert("Success!");
+		window.alert("Failure!");
 	});
 
 });
