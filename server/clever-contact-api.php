@@ -30,6 +30,7 @@ define('FROM_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
 define('TO_NAME', 'Server Administrator');
 define('TO_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
 
+define('SUBJECT_MAX_LENGTH', 60);
 define('SUBJECT_PREFIX', 'Contact Form: ');
 
 define('MESSAGE_PREFIX', 'Someone has submitted the following message via the contact form at ' . CONTEXT_NAME .  ':');
@@ -42,6 +43,11 @@ define('ECHO_SUBMISSION', true);
 $to = TO_NAME . '<' . TO_EMAIL_ADDRESS . '>';
 
 $subject = SUBJECT_PREFIX . $_POST['subject'];
+
+if (strlen($subject) > SUBJECT_MAX_LENGTH)
+{
+	$subject = substr($subject, 0, SUBJECT_MAX_LENGTH - 3) . "...";
+}
 
 $body = MESSAGE_PREFIX . "\r\n\r\n";
 $body .= 'Sender Name: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
