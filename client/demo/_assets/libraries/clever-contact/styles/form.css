@@ -146,6 +146,11 @@ form textarea:disabled
 	}
 }
 
+form input[type="text"][name="verification"]
+{
+	display: none
+}
+
 form footer
 {
 	border-radius: 0.25em;
