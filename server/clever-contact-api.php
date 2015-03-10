@@ -40,6 +40,8 @@ define('ECHO_SUBMISSION', true);
 
 // Build the e-mail.
 
+$honeypot_response_length = strlen($_POST['verification']);
+
 $to = TO_NAME . '<' . TO_EMAIL_ADDRESS . '>';
 
 $subject = SUBJECT_PREFIX . $_POST['subject'];
@@ -50,6 +52,9 @@ if (strlen($subject) > SUBJECT_MAX_LENGTH)
 }
 
 $body = MESSAGE_PREFIX . "\r\n\r\n";
+
+$body .= 'Honeypot Response: ' . ($honeypot_response_length > 0 ? $_POST['verification'] . ' (Characters: ' . $honeypot_response_length . ')' : 'None') . "\r\n\r\n";
+
 $body .= 'Sender Name: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
 $body .= 'Sender E-Mail Address: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
 $body .= $_POST['body'];
