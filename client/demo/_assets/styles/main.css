@@ -32,27 +32,29 @@ html
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 
-	margin: 0;
+	margin: 0
 }
 
 body
 {
+	display: -webkit-flex;
 	display: flex;
 
+	-webkit-flex-direction: column;
 	flex-direction: column;
 
 	padding: 0;
 
-	min-height: 100vh;
+	height: 100vh;
 
-	margin: 0;
+	margin: 0
 }
 
 h1, h2
 {
 	padding: 0;
 
-	margin: 0;
+	margin: 0
 }
 
 /*----------------------------------------------------------------------------*\
@@ -68,12 +70,15 @@ body > header
 	background-color: #ddd;
 
 	position: relative;
+
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0
 }
 
 body > header > h1,
 body > header > h2
 {
-	text-align: center;
+	text-align: center
 }
 
 body > header > h1
@@ -90,7 +95,7 @@ body > header > h1
 
 	line-height: 0.7em;
 
-	margin: 0.25em auto 0.25em auto;
+	margin: 0.25em auto 0.25em auto
 }
 
 body > header > h2
@@ -100,7 +105,7 @@ body > header > h2
 	font-size: 1em;
 	font-weight: normal;
 
-	margin: 0 auto 0 auto;
+	margin: 0 auto 0 auto
 }
 
 @media (min-width: 768px)
@@ -109,7 +114,7 @@ body > header > h2
 	{
 		padding: 0.5em 1.5em;
 
-		overflow: auto;
+		overflow: auto
 	}
 
 	body > header > h1
@@ -118,7 +123,7 @@ body > header > h2
 
 		margin: 0;
 
-		float: left;
+		float: left
 	}
 
 	body > header > h2
@@ -126,7 +131,7 @@ body > header > h2
 		position: absolute;
 
 		right: 1.5em;
-		bottom: 1.25em;
+		bottom: 1.25em
 	}
 }
 
@@ -136,7 +141,8 @@ body > header > h2
 
 main
 {
-	flex: 1;
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
 
 	box-sizing: border-box;
 
@@ -144,9 +150,9 @@ main
 
 	max-width: 980px;
 
-	margin: auto;
+	margin: 0 auto 0 auto;
 
-	position: relative;
+	position: relative
 }
 
 main h3
@@ -154,7 +160,7 @@ main h3
 	font-size: 2em;
 	font-weight: 700;
 
-	margin: 1em 0 0 0;
+	margin: 1em 0 0 0
 }
 
 main > section.info > p
@@ -167,31 +173,34 @@ main > section.info > p
 
 	font-size: 0.75em;
 
-	margin: 1em 0 0 0;
+	margin: 1em 0 0 0
 }
 
 @media (min-width: 768px)
 {
 	main > section.info
 	{
-		display: flex;
+		display: -webkit-flex;
+		display: flex
 	}
 
 	main > section.info > p
 	{
-		flex: 1;
+		box-sizing: border-box;
+
+		-webkit-flex: 0 0 calc(50% - 0.5em);
+		flex: 0 0 calc(50% - 0.5em)
 	}
 
 	main > section.info > p:nth-child(odd)
 	{
-
-		margin: 1em 0.5em 0 0;
+		margin: 1em 0.5em 0 0
 	}
 
 	main > section.info > p:nth-child(even)
 	{
 
-		margin: 1em 0 0 0.5em;
+		margin: 1em 0 0 0.5em
 	}
 }
 
@@ -208,66 +217,78 @@ body > footer
 	background-color: #363636;
 	color: #777;
 
-	overflow: auto;
+	-webkit-flex: 0 0 auto;
+	flex: 0 0 auto;
+
+	overflow: auto
 }
 
 body > footer > p
 {
 	text-align: center;
-	margin: 0.25em;
+
+	margin: 0.25em
 }
 
 @media (min-width: 768px)
 {
 	body > footer
 	{
+		display: -webkit-flex;
 		display: flex;
+
+		-webkit-justify-content: space-between;
+		justify-content: space-between
 	}
 
 	body > footer > p
 	{
-		flex: 1;
+		-webkit-flex: 0 1 33.33%;
+		flex: 0 1 33.33%;
 
-		margin: 0;
+		margin: 0
 	}
 
 	body > footer > p:first-child
 	{
 		text-align: left;
 
-		order: 1;
+		-webkit-order: 1;
+		order: 1
 	}
 
 	body > footer > p:nth-child(2)
 	{
 		text-align: right;
 
-		order: 3;
+		-webkit-order: 3;
+		order: 3
 	}
 
 	body > footer > p:last-child
 	{
-		order: 2;
+		-webkit-order: 2;
+		order: 2
 	}
 }
 
 body > footer a
 {
-	text-decoration: none;
+	text-decoration: none
 }
 
 body > footer a:link,
 body > footer a:visited
 {
-	color: #09c;
+	color: #09c
 }
 
 body > footer a:hover
 {
-	color: #0cf;
+	color: #0cf
 }
 
 body > footer a:active
 {
-	color: #369;
+	color: #369
 }
