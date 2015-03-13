@@ -43,6 +43,9 @@ body
 	-webkit-flex-direction: column;
 	flex-direction: column;
 
+	-webkit-align-items: center;
+	align-items: center;
+
 	padding: 0;
 
 	height: 100vh;
@@ -63,11 +66,15 @@ h1, h2
 
 body > header
 {
+	box-sizing: border-box;
+
 	border-bottom: 5px solid #ccc;
 
 	padding: 0.75em 1.5em 1.25em 1.5em;
 
 	background-color: #ddd;
+
+	width: 100%;
 
 	position: relative;
 
@@ -150,7 +157,7 @@ main
 
 	max-width: 980px;
 
-	margin: 0 auto 0 auto;
+	margin: 0;
 
 	position: relative
 }
@@ -210,12 +217,16 @@ main > section.info > p
 
 body > footer
 {
+	box-sizing: border-box;
+
 	border-top: 5px solid #666;
 
 	padding: 0.5em 1em;
 
 	background-color: #363636;
 	color: #777;
+
+	width: 100%;
 
 	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
