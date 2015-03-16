@@ -83,3 +83,29 @@ if ('ECHO_SUBMISSION')
 // Respond to the request in JSON format.
 
 print json_encode($response);
+
+
+// E-Mail Address Validation Function
+
+function validate_user_input($input)
+{
+	$results = [];
+
+	foreach ($input as $key => $value)
+	{
+
+		if ($key === 'sender-e-mail-address')
+		{
+			$results[] =
+			[
+				'form_element_name' => $key,
+
+				'friendly_name' => 'E-Mail Address',
+
+				'result' => (strlen($key > 0) && preg_match('/^[\w\-\.]+@([\w]+[\.])*[\w]+[\.][A-z]{2,}$/', $value) ? true : false)
+			];
+		}
+	}
+
+	return $results;
+}
