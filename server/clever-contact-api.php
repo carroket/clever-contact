@@ -37,6 +37,8 @@ define('MESSAGE_PREFIX', 'Someone has submitted the following message via the co
 
 define('ECHO_SUBMISSION', true);
 
+define('VALID_EMAIL_ADDRESS_PATTERN', '/^[\w\-\.]+@([\w]+[\.])*[\w]+[\.][A-z]{2,}$/');
+
 
 // Build the e-mail.
 
@@ -102,7 +104,7 @@ function validate_user_input($input)
 
 				'friendly_name' => 'E-Mail Address',
 
-				'result' => (strlen($key > 0) && preg_match('/^[\w\-\.]+@([\w]+[\.])*[\w]+[\.][A-z]{2,}$/', $value) ? true : false)
+				'result' => (strlen($key > 0) && preg_match(VALID_EMAIL_ADDRESS_PATTERN, $value) ? true : false)
 			];
 		}
 	}
