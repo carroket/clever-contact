@@ -99,7 +99,7 @@ function validate_user_input($input)
 
 				'friendly_name' => 'E-Mail Address',
 
-				'result' => Validation::validate_user_input_format($value, 1, 255, VALID_EMAIL_ADDRESS_PATTERN)
+				'result' => Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN)
 			];
 		}
 	}
