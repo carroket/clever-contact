@@ -20,24 +20,12 @@
 \*============================================================================*/
 
 
-// Set deployment-specific options.
+if (!@include_once('./config.php'))
+{
+	header('Content-Type: text/plain');
 
-define('CONTEXT_NAME', 'your Web site');
-
-define('FROM_NAME', 'Clever Contact');
-define('FROM_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
-
-define('TO_NAME', 'Server Administrator');
-define('TO_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
-
-define('SUBJECT_MAX_LENGTH', 60);
-define('SUBJECT_PREFIX', 'Contact Form: ');
-
-define('MESSAGE_PREFIX', 'Someone has submitted the following message via the contact form at ' . CONTEXT_NAME .  ':');
-
-define('ECHO_SUBMISSION', true);
-
-define('VALID_EMAIL_ADDRESS_PATTERN', '/^[\w\-\.]+@([\w]+[\.])*[\w]+[\.][A-z]{2,}$/');
+	exit('Error: A necessary file could not be loaded.');
+}
 
 
 // Build the e-mail.
