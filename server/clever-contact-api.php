@@ -92,7 +92,7 @@ function validate_user_input($input)
 
 				'friendly_name' => 'E-Mail Address',
 
-				'result' => (strlen($key > 0) && preg_match(VALID_EMAIL_ADDRESS_PATTERN, $value) ? true : false)
+				'result' => (strlen($key) > 0 && preg_match(VALID_EMAIL_ADDRESS_PATTERN, $value) ? true : false)
 			];
 		}
 	}
