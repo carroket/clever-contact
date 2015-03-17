@@ -28,6 +28,14 @@ if (!@include_once('./config.php'))
 }
 
 
+if (!@include_once('./classes/Validation.php'))
+{
+	header('Content-Type: text/plain');
+
+	exit('Error: A necessary file could not be loaded.');
+}
+
+
 // Build the e-mail.
 
 $honeypot_response_length = strlen($_POST['verification']);
@@ -83,7 +91,6 @@ function validate_user_input($input)
 
 	foreach ($input as $key => $value)
 	{
-
 		if ($key === 'sender-e-mail-address')
 		{
 			$results[] =
@@ -92,7 +99,7 @@ function validate_user_input($input)
 
 				'friendly_name' => 'E-Mail Address',
 
-				'result' => (strlen($key) > 0 && preg_match(VALID_EMAIL_ADDRESS_PATTERN, $value) ? true : false)
+				'result' => Validation::validate_user_input_format($value, 1, 255, VALID_EMAIL_ADDRESS_PATTERN)
 			];
 		}
 	}
