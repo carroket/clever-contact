@@ -39,4 +39,4 @@ define('ECHO_SUBMISSION', true);
 
 define('VALID_EMAIL_ADDRESS_MIN_LENGTH', 1);
 define('VALID_EMAIL_ADDRESS_MAX_LENGTH', 255);
-define('VALID_EMAIL_ADDRESS_PATTERN', '/^[\w\-\.]+@([\w]+[\.])*[\w]+[\.][A-z]{2,}$/');
+define('VALID_EMAIL_ADDRESS_PATTERN', '/^[\A-Za-z\-\.]+[\A-Za-z\-\.+]*@([A-Za-z\-]+[\.])+[A-Za-z]{2,}$/');
