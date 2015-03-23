@@ -104,7 +104,7 @@ function validate_user_input($input)
 		{
 			$result = Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN);
 
-			$details[$key] =
+			$details[] =
 			[
 				'formElementName' => $key,
 
