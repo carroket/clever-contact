@@ -100,16 +100,26 @@ function validate_user_input($input)
 	{
 		if ($key === 'sender-e-mail-address')
 		{
-			$details[] =
+			$result = Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN);
+
+			$details[$key] =
 			[
 				'form_element_name' => $key,
 
 				'friendly_name' => 'E-Mail Address',
 
-				'result' => Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN)
+				'result' => $result
 			];
 
-			// TO DO: Increment the summary counts as appropriate.
+			if ($result === true)
+			{
+				$summary['valid_count']++;
+			}
+
+			else
+			{
+				$summary['invalid_count']++;
+			}
 		}
 	}
 
