@@ -87,13 +87,20 @@ print json_encode($response);
 
 function validate_user_input($input)
 {
-	$results = [];
+	$details = [];
+
+	$summary =
+	[
+		'valid_count' => 0,
+
+		'invalid_count' => 0
+	];
 
 	foreach ($input as $key => $value)
 	{
 		if ($key === 'sender-e-mail-address')
 		{
-			$results[] =
+			$details[] =
 			[
 				'form_element_name' => $key,
 
@@ -101,8 +108,10 @@ function validate_user_input($input)
 
 				'result' => Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN)
 			];
+
+			// TO DO: Increment the summary counts as appropriate.
 		}
 	}
 
-	return $results;
+	return ['summary' => $summary, 'details' => $details];
 }
