@@ -80,6 +80,8 @@ if ('ECHO_SUBMISSION')
 
 // Respond to the request in JSON format.
 
+header('Content-Type: application/json');
+
 print json_encode($response);
 
 
