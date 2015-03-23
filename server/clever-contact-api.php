@@ -36,6 +36,11 @@ if (!@include_once('./classes/Validation.php'))
 }
 
 
+// Validate the user input.
+
+$validation_results = validate_user_input($_POST);
+
+
 // Build the e-mail.
 
 $honeypot_response_length = strlen($_POST['verification']);
@@ -65,9 +70,27 @@ $additional_headers = 'From: ' . FROM_NAME . '<' . FROM_EMAIL_ADDRESS . '>';
 $response = array();
 
 
-// Send the e-mail and add the result to the response array.
+/*
+	If all of the user input passed validation, try to send the e-mail and add
+	the result of the attempt to the response array.
 
-$response['accepted'] = mail($to, $subject, wordwrap($body, 70, "\r\n", true), $additional_headers);
+	Otherwise, add the validation results to the response array so the client
+	can respond accordingly.
+*/
+
+if ($validation_results['summary']['invalidCount'] === 0)
+{
+	$response['inputValidated'] = true;
+
+	$response['accepted'] = mail($to, $subject, wordwrap($body, 70, "\r\n", true), $additional_headers);
+}
+
+else
+{
+	$response['inputValidated'] = false;
+
+	$response['validationResults'] = $validation_results;
+}
 
 
 // If requested, add the submission to the response array.
