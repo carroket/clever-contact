@@ -30,8 +30,12 @@ define('FROM_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
 define('TO_NAME', 'Server Administrator');
 define('TO_EMAIL_ADDRESS', $_SERVER['SERVER_ADMIN']);
 
+define('SENDER_NAME_MAX_LENGTH', 255);
+
 define('SUBJECT_MAX_LENGTH', 60);
 define('SUBJECT_PREFIX', 'Contact Form: ');
+
+define('BODY_MAX_LENGTH', 65536);
 
 define('MESSAGE_PREFIX', 'Someone has submitted the following message via the contact form at ' . CONTEXT_NAME .  ':');
 

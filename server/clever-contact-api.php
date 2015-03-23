@@ -123,7 +123,31 @@ function validate_user_input($input)
 
 	foreach ($input as $key => $value)
 	{
-		if ($key === 'sender-e-mail-address')
+		if ($key === 'sender-name')
+		{
+			$result = Validation::validate_user_input_format($value, 1, SENDER_NAME_MAX_LENGTH);
+
+			$details[] =
+			[
+				'formElementName' => $key,
+
+				'friendlyName' => 'Name',
+
+				'result' => $result
+			];
+
+			if ($result === true)
+			{
+				$summary['validCount']++;
+			}
+
+			else
+			{
+				$summary['invalidCount']++;
+			}
+		}
+
+		elseif ($key === 'sender-e-mail-address')
 		{
 			$result = Validation::validate_user_input_format($value, VALID_EMAIL_ADDRESS_MIN_LENGTH, VALID_EMAIL_ADDRESS_MAX_LENGTH, VALID_EMAIL_ADDRESS_PATTERN);
 
@@ -132,6 +156,54 @@ function validate_user_input($input)
 				'formElementName' => $key,
 
 				'friendlyName' => 'E-Mail Address',
+
+				'result' => $result
+			];
+
+			if ($result === true)
+			{
+				$summary['validCount']++;
+			}
+
+			else
+			{
+				$summary['invalidCount']++;
+			}
+		}
+
+		elseif ($key === 'subject')
+		{
+			$result = Validation::validate_user_input_format($value, 1, SUBJECT_MAX_LENGTH);
+
+			$details[] =
+			[
+				'formElementName' => $key,
+
+				'friendlyName' => 'Subject',
+
+				'result' => $result
+			];
+
+			if ($result === true)
+			{
+				$summary['validCount']++;
+			}
+
+			else
+			{
+				$summary['invalidCount']++;
+			}
+		}
+
+		elseif ($key === 'body')
+		{
+			$result = Validation::validate_user_input_format($value, 1, BODY_MAX_LENGTH);
+
+			$details[] =
+			[
+				'formElementName' => $key,
+
+				'friendlyName' => 'Body',
 
 				'result' => $result
 			];
