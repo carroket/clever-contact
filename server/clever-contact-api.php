@@ -93,9 +93,9 @@ function validate_user_input($input)
 
 	$summary =
 	[
-		'valid_count' => 0,
+		'validCount' => 0,
 
-		'invalid_count' => 0
+		'invalidCount' => 0
 	];
 
 	foreach ($input as $key => $value)
@@ -106,21 +106,21 @@ function validate_user_input($input)
 
 			$details[$key] =
 			[
-				'form_element_name' => $key,
+				'formElementName' => $key,
 
-				'friendly_name' => 'E-Mail Address',
+				'friendlyName' => 'E-Mail Address',
 
 				'result' => $result
 			];
 
 			if ($result === true)
 			{
-				$summary['valid_count']++;
+				$summary['validCount']++;
 			}
 
 			else
 			{
-				$summary['invalid_count']++;
+				$summary['invalidCount']++;
 			}
 		}
 	}
