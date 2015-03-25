@@ -17,7 +17,7 @@
 
 \*============================================================================*/
 
-form
+form.clever-contact
 {
 	border-radius: 0.5em;
 
@@ -27,7 +27,7 @@ form
 	color: #000
 }
 
-form > fieldset
+form.clever-contact > fieldset
 {
 	border: none;
 	border-top: 1px solid #ddd;
@@ -37,12 +37,12 @@ form > fieldset
 	margin: 0
 }
 
-form > fieldset + fieldset
+form.clever-contact > fieldset + fieldset
 {
 	margin-top: 1em
 }
 
-form > fieldset > legend
+form.clever-contact > fieldset > legend
 {
 	display: block;
 
@@ -59,7 +59,7 @@ form > fieldset > legend
 	font-style: italic
 }
 
-form div
+form.clever-contact div
 {
 	border: 1px solid #ccc;
 
@@ -70,7 +70,7 @@ form div
 	margin: 1em 0 0 2em
 }
 
-form label
+form.clever-contact label
 {
 	display: block;
 
@@ -81,9 +81,9 @@ form label
 	cursor: pointer
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea
+form.clever-contact input[type="text"],
+form.clever-contact input[type="email"],
+form.clever-contact textarea
 {
 	display: block;
 
@@ -110,16 +110,16 @@ form textarea
 	margin: 0
 }
 
-form textarea
+form.clever-contact textarea
 {
 	height: 5em;
 
 	overflow: auto
 }
 
-form input[type="text"]:disabled,
-form input[type="email"]:disabled,
-form textarea:disabled
+form.clever-contact input[type="text"]:disabled,
+form.clever-contact input[type="email"]:disabled,
+form.clever-contact textarea:disabled
 {
 	background-color: #eee;
 	color: #888
@@ -149,12 +149,12 @@ form textarea:disabled
 	}
 }
 
-form input[type="text"][name="verification"]
+form.clever-contact input[type="text"][name="verification"]
 {
 	display: none
 }
 
-form footer
+form.clever-contact footer
 {
 	border-radius: 0.25em;
 
@@ -169,7 +169,7 @@ form footer
 	position: relative
 }
 
-form footer input[type="submit"]
+form.clever-contact footer input[type="submit"]
 {
 	display: block;
 
@@ -190,19 +190,19 @@ form footer input[type="submit"]
 	cursor: pointer
 }
 
-form footer input[type="submit"]:hover
+form.clever-contact footer input[type="submit"]:hover
 {
 	background-color: #437cad
 }
 
-form footer input[type="submit"]:active
+form.clever-contact footer input[type="submit"]:active
 {
 	background-color: #296294;
 
 	text-shadow: none
 }
 
-form footer input[type="submit"]:disabled
+form.clever-contact footer input[type="submit"]:disabled
 {
 	background-color: #eee;
 	color: #bbb;
