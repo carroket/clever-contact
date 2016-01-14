@@ -24,7 +24,7 @@ Clever Contact was made with current and developing standards, browsers, and tec
 
 Yes, there is plenty. :)
 
-* User input is currently passed to PHP's [mail](http://php.net/manual/en/function.mail.php) function with minimal processing. The form-processor should probably have a full security audit a bit of input validation.
+* User input is currently passed to PHP's [mail](http://php.net/manual/en/function.mail.php) function with minimal processing. The form-processor should probably have a full security audit, including both input validation and data-handling.
 * As Clever Contact is specifically intended to be a modern system, no effort has been made to provide fallback functionality or graceful degradation for old browsers. Supporting obsolete browsers whose ubiquity slows the modernization of the Web is not a particularly compelling use case for me as I do not think of it as an actual improvement, but if you disagree, you can fork Clever Contact and corrupt it to your evil purposes between eating babies or not using turn signals or whatever it is you do to express the darkness in your heart.
 * I made several themes and a theme switcher, but I removed them to focus on completing and delivering a minimum viable product. I will likely restore and further develop them later.
 
