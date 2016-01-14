@@ -66,6 +66,21 @@ module.exports = function (grunt) {
 			}
 		},
 
+		open: {
+			demo: {
+				path: 'http://localhost:<%= serve.options.port %>/contact.html'
+			}
+		},
+
+		serve: {
+			options: {
+				port: 9000,
+				serve: {
+					path: 'build/client/demo'
+				}
+			}
+		},
+
 		uglify: {
 			build: {
 				files: {
@@ -91,6 +106,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-open');
+	grunt.loadNpmTasks('grunt-serve');
 
-	grunt.registerTask('default', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify']);
+	grunt.registerTask('default', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify', 'demo']);
+
+	grunt.registerTask('demo', ['open:demo', 'serve']);
 };
