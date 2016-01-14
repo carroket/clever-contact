@@ -1,6 +1,6 @@
 # Clever Contact
 
-**The Contact Form, Reconsidered**
+**The Humble Contact Form, Reconsidered**
 
 ## Overview
 
