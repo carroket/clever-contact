@@ -1,6 +1,6 @@
 {
 	"name": "clever-contact",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"description": "The Humble Contact Form, Reconsidered",
 	"main": "client/demo/contact.html",
 	"dependencies": {},
