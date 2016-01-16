@@ -6,7 +6,7 @@
 
 Clever Contact includes everything one needs to add a simple, clean, and modern contact form to a PHP-powered Web site:
 * an HTML5 form, including a demo page that can be customized and deployed in full if desired
-* CSS 3 style sheets
+* CSS 3 style sheetsπ∏
 * JavaScript to handle form-submission and response-handling
 * PHP to handle form-processing
 
@@ -19,6 +19,27 @@ Clever Contact was made with current and developing standards, browsers, and tec
 * modern, evergreen browsers - no legacy cruft
 * easy customization and deployment
 * clean and valid code, preferably free of unnecessary and possibly conflicting IDs
+
+## Setup
+
+You may find Clever Contact usable pretty much as presented in the demo directory, in which case you should be able to just customize things to your liking and drop the files where you like on a Web server running a recent version of PHP.
+* **config.php:** Be sure to check that the constant values are to your liking.
+* **contact.html:** Ensure that the "form" element's "onsubmit" attribute includes the proper path to clever-contact-api.php.
+
+If you have Node.js, npm, and grunt-cli installed (and you should because they are great), you can also minify the JavaScript, CSS, and HTML and open and serve the demo page from your command line. To install the necessary packages to enable this functionality, just type the following from within your copy of the Clever Contact repository:
+
+```bash
+npm install
+```
+
+After that, you should be able to build, process, open, and serve Clever Contact just by running Grunt:
+
+```bash
+grunt
+```
+
+You can also run specific Grunt tasks if you are so inclined. Please explore Gruntfile.js for more details.
+
 
 ## Room for Improvement
 
