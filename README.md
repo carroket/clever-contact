@@ -6,7 +6,7 @@
 
 Clever Contact includes everything one needs to add a simple, clean, and modern contact form to a PHP-powered Web site:
 * an HTML5 form, including a demo page that can be customized and deployed in full if desired
-* CSS 3 style sheetsπ∏
+* CSS 3 style sheets
 * JavaScript to handle form-submission and response-handling
 * PHP to handle form-processing
 
