@@ -111,7 +111,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify']);
 
-	grunt.registerTask('default', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify', 'demo']);
+	grunt.registerTask('default', ['build', 'demo']);
 
 	grunt.registerTask('demo', ['open:demo', 'serve']);
 };
