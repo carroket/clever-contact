@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 		cssmin: {
 			build: {
 				files: {
-					'build/client/demo/_assets/libraries/clever-contact/styles/form.min.css': ['source/client/demo/_assets/libraries/clever-contact/styles/main.css'],
+					'build/client/demo/_assets/libraries/clever-contact/styles/form.min.css': ['source/client/demo/_assets/libraries/clever-contact/styles/form.css'],
 					'build/client/demo/_assets/styles/main.min.css': ['source/client/demo/_assets/styles/main.css']
 				}
 			}
