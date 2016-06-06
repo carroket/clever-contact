@@ -109,6 +109,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-open');
 	grunt.loadNpmTasks('grunt-serve');
 
+	grunt.registerTask('build', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify']);
+
 	grunt.registerTask('default', ['clean', 'copy', 'htmlmin', 'cssmin', 'uglify', 'demo']);
 
 	grunt.registerTask('demo', ['open:demo', 'serve']);
