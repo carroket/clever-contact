@@ -17,6 +17,7 @@
 		"grunt-serve": "^0.1.6"
 	},
 	"scripts": {
+		"start": "grunt demo",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
