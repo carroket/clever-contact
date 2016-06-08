@@ -32,7 +32,7 @@ If you have Node.js, npm, and grunt-cli installed (and you should because they a
 npm install
 ```
 
-After that, you should be able to build, process, open, and serve Clever Contact just by running Grunt:
+After that, you should be able to build Clever Contact and open and serve the front-end demo page (which you can adapt for your own needs) just by running Grunt:
 
 ```bash
 grunt
