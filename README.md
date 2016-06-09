@@ -38,7 +38,19 @@ After that, you should be able to build Clever Contact and open and serve the fr
 grunt
 ```
 
-You can also run specific Grunt tasks if you are so inclined. Please explore Gruntfile.js for more details.
+You can also run specific Grunt tasks if you are so inclined. For example, you can delete the build directory like so:
+
+```bash
+grunt clean
+```
+
+If Clever Contact has already been built, you can skip right to opening and serving the front-end demo page like so:
+
+```bash
+grunt demo
+```
+
+Please explore Gruntfile.js for more details.
 
 
 ## Room for Improvement
