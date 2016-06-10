@@ -13,8 +13,8 @@ Clever Contact includes everything one needs to add a simple, clean, and modern 
 Clever Contact was made with current and developing standards, browsers, and techniques in mind, including the following:
 * HTML5, including browser-provided input validation
 * CSS 3
-* XMLHttpRequest level 2
-* FormData
+* [XMLHttpRequest](https://xhr.spec.whatwg.org/) level 2
+* [FormData](https://xhr.spec.whatwg.org/#interface-formdata)
 * single-page applications (SPAs) and form submission via API
 * modern, evergreen browsers - no legacy cruft
 * easy customization and deployment
