@@ -52,6 +52,17 @@ grunt demo
 
 Please explore Gruntfile.js for more details.
 
+## Demo via Browsersync
+
+If you have [Browsersync](https://www.browsersync.io/) installed, you can have it serve the built demo page and watch for and respond to changes by running the provided npm script like so:
+
+```bash
+npm run-script demo
+```
+
+Obviously, the build directory will need to exist before that will work.
+
+At some point I plan to replace [grunt-serve](https://www.npmjs.com/package/grunt-serve), which has not as of this writing been updated for recent versions of Grunt, with Browsersync, but for now you can use either.
 
 ## Room for Improvement
 
