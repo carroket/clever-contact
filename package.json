@@ -17,6 +17,7 @@
 		"grunt-serve": "latest"
 	},
 	"scripts": {
+		"demo": "browser-sync start --server build/client/demo --startPath contact.html --files build/client/*",
 		"start": "grunt demo",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
