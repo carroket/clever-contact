@@ -68,7 +68,7 @@ At some point I plan to replace [grunt-serve](https://www.npmjs.com/package/grun
 
 Yes, there is plenty. :)
 
-* User input is currently passed to PHP's [mail](http://php.net/manual/en/function.mail.php) function with minimal processing. The form-processor should probably have a full security audit, including both input validation and data-handling.
+* User input is currently passed to PHP's [mail](https://php.net/manual/en/function.mail.php) function with minimal processing. The form-processor should probably have a full security audit, including both input validation and data-handling.
 * As Clever Contact is specifically intended to be a modern system, no effort has been made to provide fallback functionality or graceful degradation for old browsers. Supporting obsolete browsers whose ubiquity slows the modernization of the Web is not a particularly compelling use case for me as I do not think of it as an actual improvement, but if you disagree, you can fork Clever Contact and corrupt it to your evil purposes between eating babies or not using turn signals or whatever it is you do to express the darkness in your heart.
 * I made several themes and a theme switcher, but I removed them to focus on completing and delivering a minimum viable product. I will likely restore and further develop them later.
 
@@ -83,10 +83,10 @@ There is much more room for improvement, but I am presently more inclined to sle
 
 You might want to put that form-processor PHP script at a different origin (domain and/or port) from your main site, especially if you are using a crossdomain.xml file.
 
-I am not a security expert, but I do recommend looking into both [crossdomain.xml security](https://www.youtube.com/watch?v=v_5dTJYjSMA) and [CORS](http://www.w3.org/TR/cors/) to get some idea of the kinds of vulnerabilities and challenges that can arise when using APIs.
+I am not a security expert, but I do recommend looking into both [crossdomain.xml security](https://www.youtube.com/watch?v=v_5dTJYjSMA) and [CORS](https://www.w3.org/TR/cors/) to get some idea of the kinds of vulnerabilities and challenges that can arise when using APIs.
 
 ## Why "Clever Contact"?
 Because "Susan" would be a silly name for a contact-form library.
 
 ## Who made this?
-Clever Contact was made by [Brian Sexton](http://briansexton.com/), the leading mobile device and notebook computer rapid descent initiator at [Carroket, Inc.](http://carroket.com/)
+Clever Contact was made by [Brian Sexton](https://briansexton.com/), the leading mobile device and notebook computer rapid descent initiator at [Carroket, Inc.](https://carroket.com/)
