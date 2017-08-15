@@ -8,10 +8,10 @@
 	CSS for Clever Contact
 	-----------------------------------------------------------------------
 	© 2015 & 2016 by Carroket, Inc.
-	http://www.carroket.com/
+	https://carroket.com/
 	-----------------------------------------------------------------------
 	Made by Brian Sexton.
-	http://www.briansexton.com/
+	https://briansexton.com/
 	-----------------------------------------------------------------------
 	MIT License
 
@@ -241,7 +241,7 @@ body > footer > p
 	margin: 0.25em
 }
 
-@media (min-width: 768px)
+@media (min-width: 1024px)
 {
 	body > footer
 	{
