@@ -9,7 +9,7 @@
 
 	Validation PHP for Clever Contact
 	-----------------------------------------------------------------------
-	© 2015 & 2016 by Carroket, Inc.
+	© 2015-2017 by Carroket, Inc.
 	https://carroket.com/
 	-----------------------------------------------------------------------
 	Made by Brian Sexton.
