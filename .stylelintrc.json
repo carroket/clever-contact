@@ -1,6 +1,7 @@
 {
 	"rules": {
 		"at-rule-blacklist": ["import"],
+		"at-rule-no-unknown": true,
 		"at-rule-semicolon-space-before": "never",
 		"block-no-empty": true,
 		"block-closing-brace-newline-before": "always-multi-line",
@@ -10,6 +11,7 @@
 		"block-opening-brace-space-before": "always-single-line",
 		"color-hex-case": "lower",
 		"color-hex-length": "short",
+		"comment-no-empty": true,
 		"declaration-block-semicolon-space-before": "never",
 		"declaration-block-trailing-semicolon": "never",
 		"declaration-colon-space-after": "always",
@@ -17,6 +19,7 @@
 		"indentation": "tab",
 		"length-zero-no-unit": true,
 		"max-empty-lines": 2,
+		"media-feature-name-no-unknown": true,
 		"no-empty-source": true,
 		"no-eol-whitespace": true,
 		"no-extra-semicolons": true,
@@ -31,6 +34,10 @@
 		"selector-list-comma-space-after": "always-single-line",
 		"selector-list-comma-space-before": "never",
 		"selector-max-empty-lines": 0,
+		"selector-pseudo-class-no-unknown": true,
+		"selector-pseudo-element-no-unknown": true,
+		"selector-type-no-unknown": true,
+		"unit-no-unknown": true,
 		"value-list-comma-space-after": "always-single-line",
 		"value-list-comma-space-before": "never",
 		"value-no-vendor-prefix": true
