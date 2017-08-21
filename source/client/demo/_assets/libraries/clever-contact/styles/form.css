@@ -129,7 +129,6 @@ form.clever-contact textarea:disabled
 {
 	form div
 	{
-		display: -webkit-flex;
 		display: flex
 	}
 
