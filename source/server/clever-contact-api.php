@@ -45,7 +45,7 @@ $validation_results = validate_user_input($_POST);
 
 $honeypot_response_length = strlen($_POST['verification']);
 
-$to = TO_NAME . '<' . TO_EMAIL_ADDRESS . '>';
+$to = TO_NAME . ' <' . TO_EMAIL_ADDRESS . '>';
 
 $subject = SUBJECT_PREFIX . $_POST['subject'];
 
@@ -62,7 +62,7 @@ $body .= 'Sender Name: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
 $body .= 'Sender E-Mail Address: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
 $body .= $_POST['body'];
 
-$additional_headers = 'From: ' . FROM_NAME . '<' . FROM_EMAIL_ADDRESS . '>';
+$additional_headers = 'From: ' . FROM_NAME . ' <' . FROM_EMAIL_ADDRESS . '>';
 
 
 // Create a response array.
