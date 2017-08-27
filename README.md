@@ -85,6 +85,21 @@ You might want to put that form-processor PHP script at a different origin (doma
 
 I am not a security expert, but I do recommend looking into both [crossdomain.xml security](https://www.youtube.com/watch?v=v_5dTJYjSMA) and [CORS](https://www.w3.org/TR/cors/) to get some idea of the kinds of vulnerabilities and challenges that can arise when using APIs.
 
+## Troubleshooting
+
+### Sent E-Mail Not Arriving
+
+If Clever Contact reports that form input was validated and mail was accepted for delivery but corresponding mail does not arrive then it is possible that the outgoing mail was canceled on the server after Clever Contact handed it off. Your internet host or server administrator may be able to help you determine where and why the failure happened.
+
+#### DreamHost
+
+DreamHost has strict requirements for "From" addresses for e-mail sent through their servers, but their shared hosting configurations use default server administrator e-mail addresses that tend to not actually exist. You may need to update FROM_EMAIL_ADDRESS in Clever Contact's config.php file.
+
+Here are some details from DreamHost:
+
+* [Troubleshooting PHP mail() – DreamHost](https://help.dreamhost.com/hc/en-us/articles/215507068-Troubleshooting-PHP-mail- "Troubleshooting PHP mail() – DreamHost")
+* [Sender domain policy FAQs – DreamHost](https://help.dreamhost.com/hc/en-us/articles/215036118 "Sender domain policy FAQs – DreamHost")
+
 ## Why "Clever Contact"?
 Because "Susan" would be a silly name for a contact-form library.
 
