@@ -58,7 +58,7 @@ $body = MESSAGE_PREFIX . "\r\n\r\n";
 
 $body .= 'Honeypot Response: ' . ($honeypot_response_length > 0 ? $_POST['verification'] . ' (Characters: ' . $honeypot_response_length . ')' : 'None') . "\r\n\r\n";
 
-$body .= 'Sender Name: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
+$body .= 'Sender Name: ' . $_POST['sender-name'] . "\r\n\r\n";
 $body .= 'Sender E-Mail Address: ' . $_POST['sender-e-mail-address'] . "\r\n\r\n";
 $body .= $_POST['body'];
 
