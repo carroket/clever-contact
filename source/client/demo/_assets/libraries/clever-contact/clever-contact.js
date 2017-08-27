@@ -141,4 +141,4 @@
 		options.namespace.cleverContact = cleverContact;
 	}
 
-})(window);
+})(window, { namespace: window.components = window.components || {} });
