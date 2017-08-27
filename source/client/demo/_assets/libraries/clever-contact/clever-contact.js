@@ -62,7 +62,7 @@
 
 				var event;
 
-				var response = JSON.parse(request.response);
+				var response;
 
 				var summary;
 
@@ -71,24 +71,44 @@
 					element.disabled = false;
 				});
 
-				if (request.status === 200 && response.accepted === true) {
+				if (request.status === 200) {
 
-					// Prepare a CustomEvent object for message-sending success.
+					try {
 
-					summary = {
+						response = JSON.parse(request.response);
 
-						httpStatus: request.status,
-						accepted: true,
-						submission: response.submission
-					};
+					} catch (e) {
 
-					event = new CustomEvent("success", { detail: summary });
+						// Prepare a CustomEvent object for response-parsing failure.
 
-					// If requested, reset the form.
+						summary = {
 
-					if (instance.resetOnSuccess) {
+							httpStatus: request.status,
+							message: "Response-parsing failed."
+						};
 
-						form.reset();
+						event = new CustomEvent("failure", { detail: summary });
+					}
+
+					if (typeof response === "object" && response.accepted === true) {
+
+						// Prepare a CustomEvent object for message-sending success.
+
+						summary = {
+
+							httpStatus: request.status,
+							accepted: true,
+							submission: response.submission
+						};
+
+						event = new CustomEvent("success", { detail: summary });
+
+						// If requested, reset the form.
+
+						if (instance.resetOnSuccess) {
+
+							form.reset();
+						}
 					}
 				}
 
@@ -99,8 +119,7 @@
 					summary = {
 
 						httpStatus: request.status,
-						accepted: response.accepted,
-						submission: response.submission
+						message: "Message-sending failed."
 					};
 
 					event = new CustomEvent("failure", { detail: summary });
@@ -122,4 +141,4 @@
 		options.namespace.cleverContact = cleverContact;
 	}
 
-})(window, { namespace: window.components = window.components || {} });
+})(window);
