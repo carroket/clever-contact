@@ -90,24 +90,39 @@
 						event = new CustomEvent("failure", { detail: summary });
 					}
 
-					if (typeof response === "object" && response.accepted === true) {
+					if (typeof response === "object") {
 
-						// Prepare a CustomEvent object for message-sending success.
+						// Prepare a CustomEvent object for successful communication.
+
+						// Note: Successful communication does not imply acceptance for delivery.
 
 						summary = {
 
 							httpStatus: request.status,
-							accepted: true,
+							accepted: (response.accepted === true ? true : false),
+							inputValidated: response.inputValidated,
+							validationResults: response.inputValidated,
 							submission: response.submission
 						};
 
-						event = new CustomEvent("success", { detail: summary });
 
-						// If requested, reset the form.
+						if (response.accepted === true) {
 
-						if (instance.resetOnSuccess) {
+							event = new CustomEvent("success", { detail: summary });
 
-							form.reset();
+							// If requested, reset the form.
+
+							if (instance.resetOnSuccess) {
+
+								form.reset();
+							}
+						}
+
+						else {
+
+							summary.message = "Submission not accepted.";
+
+							event = new CustomEvent("failure", { detail: summary });
 						}
 					}
 				}
