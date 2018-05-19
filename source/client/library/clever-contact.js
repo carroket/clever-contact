@@ -140,6 +140,19 @@
 					event = new CustomEvent("failure", { detail: summary });
 				}
 
+				// Expect the unexpected.
+
+				if (!(event instanceof CustomEvent)) {
+
+					summary = {
+
+						httpStatus: request.status,
+						message: "Unexpected failure."
+					};
+
+					event = new CustomEvent("failure", { detail: summary });
+				}
+
 				// Dispatch the CustomEvent object created above.
 
 				form.dispatchEvent(event);
